@@ -20,7 +20,7 @@ class dish(models.Model):
     name_of_dish = models.CharField(max_length = 50, primary_key = True)
     ingredient1 = models.ManyToManyField(maj_ingredients)
     ingredient2 = models.ManyToManyField(com_ingredients)
-    procedure = models.TextField()
+    procedure = models.TextField(default = '')
     def __str__(self):
         return '%s'%(self.name_of_dish)
     

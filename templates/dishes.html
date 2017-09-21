@@ -1,12 +1,22 @@
 {% extends "base.html" %}
-{% block content %}
-
+{% load staticfiles %}
+{% block title %}
 <title> Dishes </title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
 <form method="post" action=" /result2">
-    <input type="text" name="ingredient11" />
-    <input type="text" name="ingredien12"/>
-    <input type="submit" />
+    <div class="input-field col l6 m6 s6">
+    <input type="text" name="ingredient11" id="ss1" class="validate" />
+    <label for="ss1"> Substring1</label>
+</div>
+<div class="input-field col s6">
+    <label for="ss2"> Substring2</label>
+    <input type="text" name="ingredient12" id="ss2" class="validate" />
+</div>
+    <input type="submit" class="btn waves-effect waves-light" name="submit" value="submit" />
 
 </form>
-
+</div>
 {% endblock %}
