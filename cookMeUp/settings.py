@@ -79,7 +79,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'cookMeUp',
         'USER' : 'postgres',
+
         'PASSWORD' : 'thara96',
+
         'HOST' :'',
         'PORT' : '',
     },

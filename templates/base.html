@@ -7,7 +7,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>
-        Cook Me Up
+        Cook Me Up, {% block title %}{% endblock %}
     </title>
     <meta content="" name="description">
     <meta content="" name="author">
@@ -32,6 +32,16 @@
 </head>
 
 <body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">CookMeUP</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/dishes">Dishes</a></li>
+            <li><a href="/ingredients">Ingredients</a></li>
+          </ul>
+        </div>
+      </nav>
+            
     <!-- Content
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       {% block content %}
