@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<title> Dishes </title>
+	<form method="get" action="get">
+    <div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Carrot</option>
+      <option value="2">Beans</option>
+      <option value="3">Cabbage</option>
+       <option value="4">Onion</option>
+
+    </select>
+    <label> Select ingredients</label>
+  </div>
+  </form>
+
+{% endblock %}
