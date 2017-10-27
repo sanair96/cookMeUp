@@ -2,18 +2,42 @@
 {% block content %}
 
 <title> Dishes </title>
-	<form method="get" action="get">
-    <div class="input-field col s12">
-    <select>
+<br>
+<form method="post" action="/result">
+	{% csrf_token %}
+    <div  class=" col s12">
+    
+    <h4 id="ing">Select ingredient 1</h4>
+    <div class="row">
+      <div class="col s3">
+
+    <select class="browser-default" name="fop" required>
       <option value="" disabled selected>Choose your option</option>
-      <option value="1">Carrot</option>
-      <option value="2">Beans</option>
-      <option value="3">Cabbage</option>
-       <option value="4">Onion</option>
+      {% for i in maj %}
+			  <option value="{{ i.0 }}">{{ i.0 }}</option>
+      {% endfor %}
+    </select>
+    </div>
+    </div>
+  </div>
+
+
+  <div class=" col s12">
+    <!--label class="heading"> <b><i>Select ingredients</i></b></label-->
+    <h4 id="ing">Select ingredient 2</h4>
+    <div class="row">
+      <div class="col s3">
+
+    <select class="browser-default" name="sop">
+      <option value="" disabled selected>Choose your option</option>
+     	{% for i in min %}
+			  <option value="{{ i.0 }}">{{ i.0 }}</option>
+      {% endfor %}	
 
     </select>
-    <label> Select ingredients</label>
+    </div>
+    </div>
   </div>
-  </form>
-
+ <input class="btn btn-default red" type="submit" name="submit">
+</form>
 {% endblock %}
